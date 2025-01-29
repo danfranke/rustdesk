@@ -379,13 +379,14 @@ class MyIdMenu: Reactor.Component {
     }
 
     function showAbout() {
-        var name = handler.get_app_name();
+        //var name = handler.get_app_name();
+	var name = "VLRemote"
         msgbox("custom-nocancel-nook-hasclose", translate("About") + " " + name, "<div style='line-height: 2em'> \
             <div>Version: " + handler.get_version() + " \
             <div>Fingerprint: " + handler.get_fingerprint() + " \
-            <div .link .custom-event url='https://rustdesk.com/privacy.html'>" + translate("Privacy Statement") + "</div> \
-            <div .link .custom-event url='https://rustdesk.com'>" + translate("Website") + "</div> \
-	    <div style='background: #2c8cff; color: white; padding: 1em; margin-top: 1em;'>Copyright &copy; 2024 Purslane Ltd.\
+            <div .link .custom-event url='https://vlcloud.com.br/privacy.html'>" + translate("Privacy Statement") + "</div> \
+            <div .link .custom-event url='https://vlcloud.com.br'>" + translate("Website") + "</div> \
+	    <div style='background: #2c8cff; color: white; padding: 1em; margin-top: 1em;'>Copyright &copy; 2024 VLCoudn Ltda.\
             <br />" + handler.get_license() + " \
             <p style='font-weight: bold'>" + translate("Slogan_tip") + "</p>\
             </div>\
@@ -428,10 +429,10 @@ class MyIdMenu: Reactor.Component {
             }, 300);
         } else if (me.id == "custom-server") {
             var configOptions = handler.get_options();
-            var old_relay = configOptions["relay-server"] || "";
-            var old_api = configOptions["api-server"] || "";
-            var old_id = configOptions["custom-rendezvous-server"] || "";
-            var old_key = configOptions["key"] || "";
+            var old_relay = configOptions["relay-server"] || "111111";
+            var old_api = configOptions["api-server"] || "aaaaaaa";
+            var old_id = configOptions["custom-rendezvous-server"] || "aaaaa";
+            var old_key = configOptions["key"] || "bbbbb";
             msgbox("custom-server", "ID/Relay Server", "<div .form .set-password> \
             <div><span>" + translate("ID Server") + ": </span><input|text .outline-focus name='id' value='" + old_id + "' /></div> \
             <div><span>" + translate("Relay Server") + ": </span><input|text name='relay' value='" + old_relay + "' /></div> \
