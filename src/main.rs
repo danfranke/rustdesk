@@ -50,8 +50,8 @@ fn main() {
     );
     let matches = App::new("rustdesk")
         .version(crate::VERSION)
-        .author("Purslane Ltd<info@rustdesk.com>")
-        .about("RustDesk command line tool")
+        .author("VLCloud Ltda<info@vlcloud.com.br>")
+        .about("VLRemote command line tool")
         .args_from_usage(&args)
         .get_matches();
     use hbb_common::{config::LocalConfig, env_logger::*};
